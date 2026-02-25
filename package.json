@@ -1,0 +1,26 @@
+{
+  "name": "reminder-bot",
+  "version": "2.0.0",
+  "description": "Production-grade Google Sheets Reminder Bot with batched processing, email queue, exponential backoff, and health monitoring",
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "trigger": "curl -X POST http://localhost:7860/trigger",
+    "health": "curl http://localhost:7860/health",
+    "status": "curl http://localhost:7860/status"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.0",
+    "luxon": "^3.4.4",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.8",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}

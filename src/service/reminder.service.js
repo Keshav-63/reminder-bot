@@ -13,10 +13,10 @@ function buildReminderEmail({ taskName, ownerEmail, daysOverdue, dueDate }) {
   if (daysOverdue === 0) {
     return {
       to: ownerEmail,
-      subject: `⏰ Reminder: "${taskName}" is due today`,
+      subject: `⏰ Reminder: ${taskName} is due today`,
       text:
         `Hi,\n\n` +
-        `This is a friendly reminder that your task "${taskName}" is due TODAY (${dueDateFormatted}).\n\n` +
+        `This is a friendly reminder that your task ${taskName} is due TODAY (${dueDateFormatted}).\n\n` +
         `Please complete it at your earliest convenience.\n\n` +
         `— Reminder Bot`,
       html: buildReminderHtml({ taskName, ownerEmail, dueDateFormatted }),
@@ -28,10 +28,10 @@ function buildReminderEmail({ taskName, ownerEmail, daysOverdue, dueDate }) {
   return {
     to: ownerEmail,
     cc: config.email.managerEmail,
-    subject: `🚨 URGENT: "${taskName}" is overdue by ${daysOverdue} day(s)`,
+      subject: `🚨 URGENT: ${taskName} is overdue by ${daysOverdue} day(s)`,
     text:
       `Hi,\n\n` +
-      `Your task "${taskName}" is OVERDUE by ${daysOverdue} day(s).\n` +
+      `Your task ${taskName} is OVERDUE by ${daysOverdue} day(s).\n` +
       `Original due date: ${dueDateFormatted}\n\n` +
       `Please address this immediately.\n\n` +
       `This email has been CC'd to the manager for visibility.\n\n` +

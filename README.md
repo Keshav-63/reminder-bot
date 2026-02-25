@@ -1,4 +1,4 @@
-# Reminder Bot — Task Deadline Tracker
+# Reminder Bot: Task Deadline Tracker
 
 A fully automated system that monitors **multiple Google Spreadsheets** and sends professional HTML email reminders to team members with overdue or due-today tasks. Built for scale — handles millions of rows with batched processing, an async email queue, exponential backoff, and smart deduplication.
 
